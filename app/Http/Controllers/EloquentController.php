@@ -264,7 +264,7 @@ class EloquentController extends Controller
         $id=0;
         $output->writeln($id);
 
-        Artisan::call('app:fetch '.$id);
+        Artisan::call('app:fetchread '.$id);
 
         $sh = Sheets::spreadsheet($this->readfile())->sheet('Лист1')->get();
 
@@ -298,7 +298,7 @@ class EloquentController extends Controller
         $output = new \Symfony\Component\Console\Output\ConsoleOutput();
         $output->writeln($id);
 
-        Artisan::call('app:fetch '.$id);
+        Artisan::call('app:fetchread '.$id);
 
 
         $sh = Sheets::spreadsheet($this->readfile())->sheet('Лист1')->get();
@@ -334,7 +334,7 @@ class EloquentController extends Controller
 	{
 
 
-        Artisan::call('app:fetch 0');
+        Artisan::call('app:fetchread 0');
 
         $sheetName = "n1";
 
